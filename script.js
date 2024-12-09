@@ -36,6 +36,8 @@ window.addEventListener('scroll', function() {
     });
 });
 
+// basket Start 
+
 document.addEventListener("DOMContentLoaded", () => {
     const basketBtn = document.getElementById("basket-toggle");
     const closeBasketBtn = document.getElementById("close-basket");
@@ -85,13 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Show and hide basket
+    // Show the basket when clicking the "basket-toggle" button
     basketBtn.addEventListener("click", () => {
-        basket.classList.add("show");
+        basket.classList.add("show"); // إضافة كلاس لإظهار السلة
     });
 
+    // Hide the basket when clicking the "close-basket" button
     closeBasketBtn.addEventListener("click", () => {
-        basket.classList.remove("show");
+        basket.classList.remove("show"); // إزالة كلاس لإخفاء السلة
     });
 
     // Initial render

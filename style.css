@@ -697,3 +697,57 @@ body.dark-mode .theme-toggle {
 #basket.show {
     transform: translateX(0);
 }
+
+/* head bar style finally !  */
+
+/* الهيد بار */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  /* مظهر الهيد بار في وضع الموبايل */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; /* يجعل العناصر تظهر فوق بعض على الموبايل */
+      text-align: center;
+    }
+  
+    .header-logo {
+      margin-bottom: 10px;
+    }
+  
+    .header-links {
+      display: flex;
+      flex-direction: column; /*vertical*/
+      gap: 10px;
+    }
+    
+    .header-links a {
+      font-size: 14px; /* font weight is small.*/
+    }
+  }
+
+  /* hidden basket style .  */
+
+ /* إخفاء السلة بشكل افتراضي */
+#basket {
+    display: none;  /* السلة مخفية */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* عند إضافة كلاس show، السلة تصبح مرئية */
+#basket.show {
+    display: block;
+}
