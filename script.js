@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
         basketItems.forEach((item, index) => {
             const li = document.createElement("li");
             li.innerHTML = `
-                ${item.title}
+                ${item.title} 
+                <span class="item-count">(${item.count})</span> <!-- عداد العناصر -->
                 <button data-index="${index}">Remove</button>
             `;
             basketList.appendChild(li);
@@ -68,13 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const courseId = card.getAttribute("data-id");
             const courseTitle = card.querySelector(".course-title").textContent;
 
-            const item = { id: courseId, title: courseTitle };
-
-            // Avoid duplicates
-            if (!basketItems.some((i) => i.id === courseId)) {
-                basketItems.push(item);
-                renderBasket();
+            // البحث عن العنصر في السلة لتحديث العدادات
+            const existingItem = basketItems.find(item => item.id === courseId);
+            
+            if (existingItem) {
+                existingItem.count++;  // زيادة العداد إذا كان العنصر موجودًا مسبقًا
+            } else {
+                const item = { id: courseId, title: courseTitle, count: 1 };
+                basketItems.push(item);  // إضافة العنصر جديد مع عداد يبدأ من 1
             }
+            renderBasket();
         });
     });
 
@@ -87,14 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Show the basket when clicking the "basket-toggle" button
+    // Show and hide basket
     basketBtn.addEventListener("click", () => {
-        basket.classList.add("show"); // إضافة كلاس لإظهار السلة
+        basket.classList.add("show");
     });
 
-    // Hide the basket when clicking the "close-basket" button
     closeBasketBtn.addEventListener("click", () => {
-        basket.classList.remove("show"); // إزالة كلاس لإخفاء السلة
+        basket.classList.remove("show");
     });
 
     // Initial render

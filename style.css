@@ -751,3 +751,13 @@ header {
 #basket.show {
     display: block;
 }
+
+/* basket count styling .  */
+
+.item-count {
+    font-weight: bold;
+    color: #ff5733;  /* تغيير اللون حسب الرغبة */
+    margin-left: 10px;
+}
+
+/* ............  */
