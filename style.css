@@ -1,0 +1,699 @@
+/* Variables */
+:root {
+    --primary-color: #0077cc;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --base-spacing: 1rem;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+} */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--base-spacing);
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--base-spacing);
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: var(--base-spacing);
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #005fa3;
+}
+
+/* Courses Grid */
+.courses {
+    padding: 4rem 2rem;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--base-spacing);
+}
+
+.course-card {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--base-spacing);
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* style for courses  */
+
+/* General Section Styling */
+.courses {
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Grid Layout */
+.course-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Course Card Styling */
+.course-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.course-duration,
+.course-level,
+.course-rating {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin: 0.5rem 0;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+/* Button Styling */
+.course-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.course-btn:hover {
+    background-color: var(--primary-dark-color);
+}
+
+
+.testimonials {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--base-spacing);
+}
+
+.testimonial-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* to make it change in dark ..  */
+
+.card {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #f0f0f0;
+}
+
+
+body.dark-mode .card {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark-mode .card:hover {
+    background-color: #555;
+}
+
+body.dark-mode .card .card-title, 
+body.dark-mode .card .card-text {
+    color: #f5f5f5;  
+}
+
+
+body.dark-mode .card img {
+    filter: brightness(0.8); 
+}
+
+/* ........................  */
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author img {
+    border-radius: 50%;
+}
+
+.form-section {
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.custom-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-spacing);
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-submit {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #005fa3;
+}
+
+.advanced-grid {
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll ANI  */
+
+/* Scroll animations */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .......................................  */
+
+/* Mega Menu Style .  */
+
+.mega-menu ul {
+    display: flex;
+    list-style: none;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    margin: 0;
+}
+
+.mega-menu li {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.mega-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+.mega-menu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.mega-menu li:hover .dropdown {
+    display: block;
+}
+
+/* to make it dark mode we will set it .  */
+
+/* الأنماط الافتراضية (Light Mode) */
+body {
+    color: #f5f5f5;
+    background-color: #333;
+    font-family: 'System UI', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* تلوين العناصر */
+header {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* تغيير لون الهيدر في الوضع الليلي */
+body.dark-mode header {
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+/* زر التبديل بين الوضعين */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+body.dark-mode .theme-toggle {
+    color: #f5f5f5;
+}
+
+/* ScrollBar  */
+
+/* تخصيص الـ scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-color);
+}
+
+/* loading style   */
+
+/* إعدادات التحميل */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* print styles  */
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    button, .no-print {
+        display: none;
+    }
+}
+
+
+/* scroll effects style.  */
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* side for scrolling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* basket side style  */
+
+.course-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+}
+
+.course-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.course-btn:hover {
+    background-color: #218838;
+}
+
+/* Basket Styles */
+.basket {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    border-left: 2px solid #ccc;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.basket.active {
+    right: 0;
+}
+
+.basket-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.basket-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.basket-item:last-child {
+    border-bottom: none;
+}
+
+.toggle-basket {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.toggle-basket:hover {
+    background-color: #0056b3;
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-btn:hover {
+    background: #0056b3;
+}
+
+/* Basket Sidebar */
+#basket {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#basket h3 {
+    margin-bottom: 20px;
+}
+
+#basket ul {
+    list-style: none;
+    padding: 0;
+}
+
+#basket ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#basket ul li button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#basket ul li button:hover {
+    background: darkred;
+}
+
+/* Hidden Basket */
+.hidden {
+    transform: translateX(100%);
+}
+
+#basket.show {
+    transform: translateX(0);
+}
